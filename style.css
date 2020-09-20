@@ -44,6 +44,7 @@ h3{
   padding:20px 30px;
   font-family: 'Playfair Display', serif;
   display: table;
+  width: 70%;
 }
 p{
   font-size: 1em;
@@ -689,6 +690,11 @@ article.br-history-se-ctnt-mobile {
     font-size: 3em;
     top:20px;
   }
+  article.br-history-full-img h3 {
+    width: 90%;
+    font-size: 1em;
+    margin: 0;
+}
   article.br-history-se-ctnt-block-img-container {
     -ms-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -705,6 +711,10 @@ article.br-history-se-ctnt-mobile {
   h1, h2 {
     font-size: 1.3em;
     min-width: 250px;
+  }
+  h3{
+    width: 100%;
+
   }
   p {
     font-size: 1em;
