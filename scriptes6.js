@@ -39,15 +39,8 @@ const main = () => {
     this.setStartingPosition = () => {
       this.setProductElements()
       this.setProductWidth();
-      let centralPosition;
-      let swiperPosition;
-      if(model.productList.length%2 === 0) {
-        centralPosition = Math.ceil(model.productList.length / 2);
-        swiperPosition = Math.ceil((model.productList.length - model.productsToShow) / 2);
-      } else {
-        centralPosition = Math.floor(model.productList.length / 2);
-        swiperPosition = 0;
-      }
+      let centralPosition = 1;
+      let swiperPosition = 1
       selectors.brSwiperFocus = model.productList[centralPosition];
       selectors.brSwiperPrev = model.productList[centralPosition - 1];
       selectors.brSwiperPrev.addEventListener('click', events.onPrevious, false);
@@ -56,7 +49,7 @@ const main = () => {
       selectors.brSwiperFocus.classList.add('focus');
       selectors.brSwiperPrev.classList.add('prev');      
       selectors.brSwiperNext.classList.add('next');
-      selectors.brSwiperWrapper.style.left = `-${model.productWidth * swiperPosition}px`;
+      selectors.brSwiperWrapper.style.left = `${(model.productWidth * swiperPosition) - model.productWidth / 2}px`; 
       this.createProductCTA(selectors.brSwiperFocus);
     };
     this.createProductCTA = (selector) => {

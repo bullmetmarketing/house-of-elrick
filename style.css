@@ -563,6 +563,7 @@ article.br-history-se-ctnt-block-img{
   overflow: hidden;
   position: relative;
   width: 100%;
+  background-color: #02020e;
 }
 article.br-history-se-ctnt-block-img img {
   position: absolute;

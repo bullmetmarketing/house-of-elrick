@@ -101,19 +101,8 @@ var main = function main() {
 
       _this.setProductWidth();
 
-      var centralPosition;
-      var swiperPosition;
-
-      if (model.productList.length % 2 === 0) {
-        centralPosition = Math.ceil(model.productList.length / 2);
-        swiperPosition = Math.ceil(
-          (model.productList.length - model.productsToShow) / 2
-        );
-      } else {
-        centralPosition = Math.floor(model.productList.length / 2);
-        swiperPosition = 0;
-      }
-
+      var centralPosition = 1;
+      var swiperPosition = 1;
       selectors.brSwiperFocus = model.productList[centralPosition];
       selectors.brSwiperPrev = model.productList[centralPosition - 1];
       selectors.brSwiperPrev.addEventListener(
@@ -126,8 +115,8 @@ var main = function main() {
       selectors.brSwiperFocus.classList.add("focus");
       selectors.brSwiperPrev.classList.add("prev");
       selectors.brSwiperNext.classList.add("next");
-      selectors.brSwiperWrapper.style.left = "-".concat(
-        model.productWidth * swiperPosition,
+      selectors.brSwiperWrapper.style.left = "".concat(
+        model.productWidth * swiperPosition - model.productWidth / 2,
         "px"
       );
 
